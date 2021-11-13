@@ -36,3 +36,6 @@ conn.load_extension(sqlite_icu.extension_path().replace('.so',''))
 # now use as described in https://www.sqlite.org/icu.html
 assert conn.execute("SELECT upper('i', 'tr_TR')").fetchone() == ('İ',)
 ```
+
+## See Also
+* [sqlite-spellfix python package](https://github.com/karlb/sqlite-spellfix)
