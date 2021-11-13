@@ -1,6 +1,6 @@
 # sqlite-icu
 
-This python package includes a loadable `icu` extension module for sqlite. This allows other python packages to use this extension without requiring dependencies outside of the python ecosystem. For more details on the extension itself, see [the official documentation](https://www.sqlite.org/icu.html).
+This python package includes a loadable `icu` extension module for sqlite. This allows other python packages to use this extension without requiring dependencies outside of the python ecosystem. For more details on the extension itself, see [the official documentation](https://www.sqlite.org/src/artifact?ci=trunk&filename=ext/icu/README.txt).
 
 ## Installation
 
