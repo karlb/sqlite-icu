@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-python@v2
 
       - name: Install cibuildwheel
-        run: python -m pip install cibuildwheel==2.6.1
+        run: python -m pip install cibuildwheel==2.21.3
 
       - name: Build wheels
         run: python -m cibuildwheel --output-dir wheelhouse
@@ -21,6 +21,6 @@ jobs:
           CIBW_BEFORE_ALL_LINUX: yum install -y libicu-devel sqlite-devel
           CIBW_SKIP: "*-musllinux_*"
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           path: ./wheelhouse/*.whl
