@@ -11,7 +11,7 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
 def pkgconfig(package):
     kw = {}
     flag_map = {'-I': 'include_dirs', '-L': 'library_dirs', '-l': 'libraries'}
-    output = subprocess.getoutput(
+    output = subprocess.check_output(
         'pkg-config --cflags --libs {}'.format(package))
     for token in output.strip().split():
         kw.setdefault(flag_map.get(token[:2]), []).append(token[2:])
